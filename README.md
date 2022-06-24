@@ -94,7 +94,9 @@ The blog is based on the MediumBlog.sol smart contract which contains all the ba
 <h4>Core functions:</h4>
 <ul>
   <li><b>subscribe:</b> allow any user to subscribe & create a profile in the app for posting articles.</li>
+  <li><b>editProfile:</b> enable author to update his profile (username, picture, description).</li>
   <li><b>createPost:</b> once subscribed each user can add it's own posts by providing title, overview, main content, read time</li>
+  <li><b>updatePost:</b> author can change the details of previously published posts </li>
   <li><b>tipPostCreator:</b> allow any user to give a tip to a certain post author</li>
 </ul>
 
@@ -106,7 +108,6 @@ The blog is based on the MediumBlog.sol smart contract which contains all the ba
 
 
 ### User interface
-
 
 
 
@@ -137,7 +138,11 @@ To start the app you have to go back to the Decentral-medium folder and run the 
 <!-- FUTURE DEVELOPEMENT -->
 ## Future developements
 
+* Add article search and filter functinnalities.
 
+* Add a page to allow author to edit his posts.
+
+* Perfom contracts audit using known tools such as echidna & slither.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
