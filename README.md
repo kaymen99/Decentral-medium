@@ -61,7 +61,7 @@ Please install or have installed the following:
 This a full stack web3 decentralized application built using Hardhat/React js, so the project is devided into 2 main parts:
 <ul>
  <li><b>Smart contract/backend side:</b></li>
- Located in the hardhat folder, it contains the blockchain developement envirenment built using Hardhat, with all the smart contracts tests, deployement scripts and the plugins used (chainlink). 
+ Located in the hardhat folder, it contains the blockchain developement envirenment built using Hardhat, with all the smart contracts tests, deployement scripts and the plugins used. 
   <li><b>front-end side:</b></li>
 The code for the UI can be found in the src folder (as in all reactjs apps)
 </ul>
