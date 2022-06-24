@@ -3,13 +3,13 @@
 <!-- ABOUT THE PROJECT -->
 ## Decentral-medium
 
-This a decentrelized web3.0 version of the Medium application built on the Ethereum/Polygon blockchain
+This a decentralized web3.0 version of the Medium application built on the Ethereum/Polygon blockchain
 
 <p align="center">
-  <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/175719327-ea0f7d72-affb-4e64-8e9e-146665ede54c.png" width="100%">
+  <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/175719913-82469809-5fbc-4f0b-a341-53f30c9f8226.png" width="100%">
 </p>
 
- 
+
 ### Built With
 
 * [Solidity](https://docs.soliditylang.org/)
@@ -87,7 +87,7 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
 <!-- Working EXAMPLES -->
 ## How it Works
 
-### contracts
+### Contracts
 
 
 
