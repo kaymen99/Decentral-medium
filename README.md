@@ -89,7 +89,20 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
 
 ### Contracts
 
+The blog is based on the MediumBlog.sol smart contract which contains all the backend logic :
 
+<h4>Core functions:</h4>
+<ul>
+  <li><b>subscribe:</b> allow any user to subscribe & create a profile in the app for posting articles.</li>
+  <li><b>createPost:</b> once subscribed each user can add it's own posts by providing title, overview, main content, read time</li>
+  <li><b>tipPostCreator:</b> allow any user to give a tip to a certain post author</li>
+</ul>
+
+<h4>Admin functions: (admin is the only one that can call this functions)</h4>
+<ul>
+  <li><b>changeListingFee:</b> change the fee charged when posting a new article</li>
+  <li><b>withdrawBalance:</b> the admin is able to withdraw th contract balance which is accumulated from the charged posting fee</li>
+</ul>
 
 
 ### User interface
