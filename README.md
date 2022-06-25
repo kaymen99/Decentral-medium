@@ -81,7 +81,7 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
     MUMBAI_RPC_URL="Your mumbai RPC url from alchemy or infura"
     PRIVATE_KEY="ganahce-private-key"
    ```
-* <p>IMPORTANT : </b> For the purpose of testing you can just provide the ganache private key and ignore all the other variables.
+* <B>IMPORTANT : </b> For the purpose of testing you can just provide the ganache private key and ignore all the other variables.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -166,7 +166,7 @@ To start the app you have to go back to the Decentral-medium folder and run the 
 
 * Add article search and filter functinnalities.
 
-* Add a page to allow author to edit his posts.
+* Add a page to allow author to edit his posts and profile informations.
 
 * Perfom contracts audit using known tools such as echidna & slither.
    
