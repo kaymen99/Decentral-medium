@@ -3,7 +3,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Decentral-medium
 
-This a decentralized web3.0 version of the Medium application built on the Ethereum/Polygon blockchain
+This a decentralized web3.0 version of the Medium application built on the Ethereum/Polygon network (or any EVM compatible blockchain), users can create posts and save them directly into the blockchain using IPFS.
 
 <p align="center">
   <img alt="Dark" src="https://user-images.githubusercontent.com/83681204/175719913-82469809-5fbc-4f0b-a341-53f30c9f8226.png" width="100%">
@@ -81,6 +81,7 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
     MUMBAI_RPC_URL="Your mumbai RPC url from alchemy or infura"
     PRIVATE_KEY="ganahce-private-key"
    ```
+* <p>IMPORTANT : </b> For the purpose of testing you can just provide the ganache private key and ignore all the other variables.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -109,7 +110,32 @@ The blog is based on the MediumBlog.sol smart contract which contains all the ba
 
 ### User interface
 
+The app is structered into 4 pages:
 
+* The home page is the landing page of the app, it lists all the published posts (both featured and normal).
+
+![Capture d’écran 2022-06-24 à 21 50 22](https://user-images.githubusercontent.com/83681204/175750937-d4bbbaf2-6d43-4c36-8729-9538c07ab7d3.png)
+
+* Eash author have it's own dashboard where he can find all his previously published posts, and he can add or edit the posts, the dashboard can be accessed from the 'connect' button
+
+![Capture d’écran 2022-06-24 à 21 55 58](https://user-images.githubusercontent.com/83681204/175751028-672e3973-e1fe-4fab-ad67-e2111a17a493.png)
+
+* To be able to create a post the author must first register into the app by providing: username, profile description & picture. The 'register' button can be found in the dashboard page on the first visit.
+
+![Capture d’écran 2022-06-24 à 23 50 17](https://user-images.githubusercontent.com/83681204/175751091-7fbd6341-310b-411b-8353-20b653260534.png)
+
+* For creating a new post the app provide the author a content editor built using react simplemde-editor where he can freely design his post, then by providing a title, overview, cover imae and the article read time the author can publish the post while paying a small 'posting fee'. 
+
+![Capture d’écran 2022-06-24 à 21 56 27](https://user-images.githubusercontent.com/83681204/175751246-df4a73f5-4b56-4583-b76f-f475abd3772a.png)
+
+* Each post can be viewed on it's own page, there readers can also choose to give a tip to the author by clicking on the 'give a tip' button which will open a window where the reader can select the tip amount. 
+
+<table>
+  <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/83681204/175751412-8a3adda8-5648-4e02-b075-e9a03af37189.png"></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/83681204/175751552-7d21b151-6f4d-4c7d-8287-d82e1cb97e7a.png"></td>
+  </tr>
+ </table>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
