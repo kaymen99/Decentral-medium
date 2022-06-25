@@ -81,7 +81,7 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
     MUMBAI_RPC_URL="Your mumbai RPC url from alchemy or infura"
     PRIVATE_KEY="ganahce-private-key"
    ```
-* <B>IMPORTANT : </b> For the purpose of testing you can just provide the ganache private key and ignore all the other variables.
+* <b>IMPORTANT : </b> For the purpose of testing you can just provide the ganache private key and ignore all the other variables.
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
