@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/k.aymen/smart_contracts/decentral-medium/hardhat/contracts/MediumBlog.sol": {
+      "lastModificationDate": 1656450252170,
+      "contentHash": "bc5f633d76588dd27ada5cdd61bee6d7",
+      "sourceName": "contracts/MediumBlog.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "MediumBlog"
+      ]
+    }
+  }
+}
