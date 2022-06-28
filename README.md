@@ -96,7 +96,7 @@ The blog is based on the MediumBlog.sol smart contract which contains all the ba
 <ul>
   <li><b>subscribe:</b> allow any user to subscribe & create a profile in the app for posting articles.</li>
   <li><b>editProfile:</b> enable author to update his profile (username, picture, description).</li>
-  <li><b>createPost:</b> once subscribed each user can add it's own posts by providing title, overview, main content, read time</li>
+  <li><b>createPost:</b> once subscribed each user can add it's own posts by providing a title,an overview, main content and the read time</li>
   <li><b>updatePost:</b> author can change the details of previously published posts </li>
   <li><b>tipPostCreator:</b> allow any user to give a tip to a certain post author</li>
 </ul>
@@ -118,7 +118,7 @@ The app is structered into 4 pages:
 
 * Eash author have it's own dashboard where he can find all his previously published posts, and he can add or edit the posts, the dashboard can be accessed from the 'connect' button
 
-![Capture d’écran 2022-06-24 à 21 55 58](https://user-images.githubusercontent.com/83681204/175751028-672e3973-e1fe-4fab-ad67-e2111a17a493.png)
+![Capture d’écran 2022-06-28 à 22 26 45](https://user-images.githubusercontent.com/83681204/176301443-ade559bc-7898-4498-b61d-384f57f95058.png)
 
 * To be able to create a post the author must first register into the app by providing: username, profile description & picture. The 'register' button can be found in the dashboard page on the first visit.
 
@@ -128,7 +128,7 @@ The app is structered into 4 pages:
 
 ![Capture d’écran 2022-06-24 à 21 56 27](https://user-images.githubusercontent.com/83681204/175751246-df4a73f5-4b56-4583-b76f-f475abd3772a.png)
 
-* Each post can be viewed on it's own page, there readers can also choose to give a tip to the author by clicking on the 'give a tip' button which will open a window where the reader can select the tip amount. 
+* Each post can be viewed on it's own page, there readers can also choose to give a tip to the author by clicking on the 'give a tip' button which will open a window where the reader can select the tip amount. The author on the other hand can find and 'Edit Post' button which will redirect him to a page where he can modify the post informations (title, content,...).
 
 <table>
   <tr>
@@ -165,8 +165,6 @@ To start the app you have to go back to the Decentral-medium folder and run the 
 ## Future developements
 
 * Add article search and filter functinnalities.
-
-* Add a page to allow author to edit his posts and profile informations.
 
 * Perfom contracts audit using known tools such as echidna & slither.
    
