@@ -20,6 +20,7 @@
     "easymde": "^2.16.1",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.8",
+    "fs-extra": "^10.1.0",
     "hardhat": "^2.9.9",
     "ipfs-http-client": "^57.0.1",
     "react": "^18.1.0",
@@ -65,3 +66,4 @@
     "dotenv": "^16.0.1"
   }
 }
+
