@@ -9,7 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import { Form, Button, Modal } from "react-bootstrap"
 import { CircularProgress } from "@mui/material";
 
-import Medium from "../artifacts/contracts/MediumBlog.sol/MediumBlog.json";
+import Medium from "../artifacts/MediumBlog.sol/MediumBlog.json";
 import { contractAddress, networkDeployedTo } from "../utils/contracts-config";
 import networksMap from "../utils/networksMap.json";
 
