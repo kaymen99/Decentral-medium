@@ -13,7 +13,7 @@ import { create } from "ipfs-http-client";
 import SimpleMDE from 'react-simplemde-editor'
 import 'easymde/dist/easymde.min.css'
 
-import Medium from "../artifacts/contracts/MediumBlog.sol/MediumBlog.json";
+import Medium from "../artifacts/MediumBlog.sol/MediumBlog.json";
 import { contractAddress, networkDeployedTo } from "../utils/contracts-config";
 import networksMap from "../utils/networksMap.json";
 
