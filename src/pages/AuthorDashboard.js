@@ -10,7 +10,7 @@ import { create } from "ipfs-http-client";
 import { Button, Form, Modal } from "react-bootstrap";
 import { CircularProgress } from "@mui/material";
 
-import Medium from "../artifacts/contracts/MediumBlog.sol/MediumBlog.json";
+import Medium from "../artifacts/MediumBlog.sol/MediumBlog.json";
 import { contractAddress, networkDeployedTo } from "../utils/contracts-config";
 import networksMap from "../utils/networksMap.json";
 
@@ -30,7 +30,6 @@ const AuthorDashboard = () => {
     const [showEdit, setShowEdit] = useState(false);
 
     const [image, setImage] = useState(null)
-    const [imagePreview, setImagePreview] = useState(null)
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -114,7 +113,7 @@ const AuthorDashboard = () => {
                     setShow(false)
                     setImage(null)
                     setLoading(false)
-                    window.location.reload();
+                    getAuthorProfileAndPosts();
                 }
                 catch (err) {
                     window.alert("An error has occured")
@@ -152,7 +151,7 @@ const AuthorDashboard = () => {
                 setShowEdit(false)
                 setImage(null)
                 setLoading(false)
-                window.location.reload();
+                getAuthorProfileAndPosts();
             }
             catch (err) {
                 window.alert("An error has occured")
@@ -169,7 +168,7 @@ const AuthorDashboard = () => {
         if (window.ethereum !== undefined) {
             getAuthorProfileAndPosts()
         }
-    }, [data.network])
+    }, [data.account])
 
 
     return (
