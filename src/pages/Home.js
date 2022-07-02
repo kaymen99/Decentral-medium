@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { ethers } from "ethers";
 
-import Medium from "../artifacts/contracts/MediumBlog.sol/MediumBlog.json";
+import Medium from "../artifacts/MediumBlog.sol/MediumBlog.json";
 import { contractAddress, networkDeployedTo } from "../utils/contracts-config";
 import networksMap from "../utils/networksMap.json";
 
