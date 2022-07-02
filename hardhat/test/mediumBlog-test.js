@@ -1,14 +1,11 @@
 const { expect } = require("chai");
 const { ethers, waffle } = require("hardhat");
+const { getAmountInWei, getAmountFromWei } = require('../utils/helper-scripts');
 
 describe("MediumBlog.sol", () => {
-  let contractFactory;
   let contract;
   let admin;
-  let adminAddress;
-  let user1;
-  let user2;
-  let postingFee = ethers.utils.parseEther("0.001", "ether");
+  let postingFee = getAmountInWei(0.001);
 
   const testPostTitle = "Full stack solidity dapp development";
   const testPostOverview = "Create full stack decentrelized apps with hardhat & React";
@@ -19,16 +16,16 @@ describe("MediumBlog.sol", () => {
 
   beforeEach(async () => {
     [admin, user1, user2] = await ethers.getSigners()
-    adminAddress = await admin.getAddress();
 
     // Deploy MediumBlog contract 
-    contractFactory = await ethers.getContractFactory("MediumBlog");
+    const contractFactory = await ethers.getContractFactory("MediumBlog");
     contract = await contractFactory.deploy(postingFee);
   });
 
   describe("Correct Deployement", () => {
     it("should have correct admin address", async () => {
       const contractAdmin = await contract.admin();
+      const adminAddress = await admin.getAddress();
       expect(contractAdmin).to.equal(adminAddress);
     });
 
@@ -184,7 +181,7 @@ describe("MediumBlog.sol", () => {
       )
 
       const postId = 0
-      const tipInETH = ethers.utils.parseEther("0.001", "ether")
+      const tipInETH = getAmountInWei(0.001)
       const initialUser1Balance = await user1.getBalance()
       await contract.connect(user2).tipPostCreator(
         postId,
@@ -192,9 +189,9 @@ describe("MediumBlog.sol", () => {
       )
       const finalUser1Balance = await user1.getBalance()
       expect(
-        parseFloat(Number(ethers.utils.formatUnits(finalUser1Balance, "ether")))
+        parseFloat(getAmountFromWei(finalUser1Balance))
       ).to.equal(
-        parseFloat(Number(ethers.utils.formatUnits(initialUser1Balance))) + parseFloat(Number(ethers.utils.formatUnits(tipInETH)))
+        parseFloat(getAmountFromWei(initialUser1Balance)) + parseFloat(getAmountFromWei(tipInETH))
       )
     });
 
@@ -205,7 +202,7 @@ describe("MediumBlog.sol", () => {
         "https://author-profile-image-url"
       )
 
-      const wrongPostingFee = ethers.utils.parseEther("0.0001", "ether");
+      const wrongPostingFee = getAmountInWei(0.0001);
 
       await expect(
         contract.connect(user1).createPost(
@@ -268,7 +265,7 @@ describe("MediumBlog.sol", () => {
 
   describe('Admin Functions', () => {
     it("it should allow admin to change posting fee", async () => {
-      const newPostingFee = ethers.utils.parseEther("0.005", "ether")
+      const newPostingFee = getAmountInWei(0.005)
       await contract.connect(admin).changePostingFee(newPostingFee)
       const fee = await contract.postingFee()
 
@@ -299,11 +296,13 @@ describe("MediumBlog.sol", () => {
       // use only 3 decimals because the withdraw transaction cost some gas
       // so admin previous balance is not the same
       expect(
-        parseFloat(Number(ethers.utils.formatUnits(finalAdminBalance, "ether"))).toFixed(3)
+        parseFloat(getAmountFromWei(finalAdminBalance)).toFixed(3)
       ).to.equal(
         parseFloat(Number(expectedBalance)).toFixed(3)
       )
     });
   })
 });
+
+
 
