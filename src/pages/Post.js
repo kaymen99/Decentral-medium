@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { ethers } from "ethers";
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
+import MDEditor from '@uiw/react-md-editor';
 import { Form, Button, Modal } from "react-bootstrap"
 import { CircularProgress } from "@mui/material";
 
@@ -173,6 +173,7 @@ const Post = () => {
                                         href={"/author-dashboard/" + post.authorAddress}>
                                         {post.authorName}
                                     </a>
+
                                     {data.account !== post.authorAddress ? (
                                         <>
                                             <a onClick={handleShow} className="btn follow">Give a tip</a>
@@ -204,10 +205,11 @@ const Post = () => {
                                     ) : (
                                         <a href={"/edit-post/" + post.id} className="btn follow">Edit Post</a>
                                     )}
-
+                                    <br />
                                     <span className="author-description">
                                         {post.authorDesc}
                                     </span>
+                                    <br />
                                     <span className="post-date">
                                         {`  ${post.createdAt.toLocaleString("default", {
                                             day: "2-digit",
@@ -226,8 +228,8 @@ const Post = () => {
 
                         <img className="featured-image img-fluid" src={post.coverImg} alt="" />
 
-                        <div className="article-post">
-                            <ReactMarkdown>{post.content}</ReactMarkdown>
+                        <div className="article-post" data-color-mode="light">
+                            <MDEditor.Markdown source={post.content} style={{ whiteSpace: 'pre-wrap' }} />
                         </div>
                     </div>
                 </div>
