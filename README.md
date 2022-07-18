@@ -124,7 +124,7 @@ The app is structered into 4 pages:
 
 ![Capture d’écran 2022-06-24 à 23 50 17](https://user-images.githubusercontent.com/83681204/175751091-7fbd6341-310b-411b-8353-20b653260534.png)
 
-* For creating a new post the app provide the author a content editor built using react simplemde-editor where he can freely design his post, then by providing a title, overview, cover imae and the article read time the author can publish the post while paying a small 'posting fee'. 
+* For creating a new post the app provide the author a content editor built using the package @uiw/react-md-editor where he can freely design his post, then by providing a title, overview, cover imae and the article read time the author can publish the post while paying a small 'posting fee'. 
 
 ![Capture d’écran 2022-06-24 à 21 56 27](https://user-images.githubusercontent.com/83681204/175751246-df4a73f5-4b56-4583-b76f-f475abd3772a.png)
 
