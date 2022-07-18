@@ -272,6 +272,7 @@ span.post-read-more a:hover {
 }
 
 .article-post {
+    margin-bottom: 40px;
     text-align: left;
     font-family: Merriweather;
     font-size: 1.2rem;
