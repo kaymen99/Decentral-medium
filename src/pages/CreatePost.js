@@ -9,8 +9,7 @@ import { CircularProgress } from "@mui/material"
 import { ethers } from "ethers";
 import { Buffer } from "buffer";
 import { create } from "ipfs-http-client";
-import SimpleMDE from 'react-simplemde-editor'
-import 'easymde/dist/easymde.min.css'
+import MDEditor from '@uiw/react-md-editor';
 
 import Medium from "../artifacts/MediumBlog.sol/MediumBlog.json";
 import { contractAddress, networkDeployedTo } from "../utils/contracts-config";
@@ -132,12 +131,13 @@ const CreatePost = () => {
                 <div>
                     <label>Post content: </label>
                 </div>
-                <SimpleMDE
-                    className="Editor"
-                    placeholder="What's on your mind?"
-                    value={content}
-                    onChange={onChange}
-                />
+                <div data-color-mode="light">
+                    <MDEditor
+                        height={400}
+                        value={content}
+                        onChange={setContent}
+                    />
+                </div>
                 <br />
                 <div style={{ width: "500px" }}>
                     <Form.Control type="file" name="file" onChange={(e) => { getImage(e) }} />
