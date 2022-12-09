@@ -82,6 +82,11 @@ The code for the UI can be found in the src folder (as in all reactjs apps)
     PRIVATE_KEY="ganahce-private-key"
    ```
 * <b>IMPORTANT : </b> For the purpose of testing you can just provide the ganache private key and ignore all the other variables.
+
+3. As infura recently removed its free IPFS storage gateway i used `web3.storage` api for storing data into IPFS, this api is as simple as infura it requires the creation of a free account and a new api token which you can do [here](https://web3.storage), when you finish add your api token into the `src/utils/ipfsStorage.js` file:
+   ```js
+    const web3storage_key = "YOUR-WEB3.STORAGE-API-TOKEN";
+   ```
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
