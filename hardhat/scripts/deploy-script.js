@@ -20,6 +20,7 @@ async function main() {
   /* this code writes the contract addresses to a local */
   /* file named config.js that we can use in the app */
   if (fs.existsSync("../src")) {
+    fs.rmSync("../src/artifacts", { recursive: true, force: true });
     fse.copySync("./artifacts/contracts", "../src/artifacts")
     fs.writeFileSync('../src/utils/contracts-config.js', `
   export const contractAddress = "${blog.address}"
